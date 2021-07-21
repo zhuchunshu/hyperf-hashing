@@ -1,0 +1,53 @@
+{
+    "name": "zhuchunshu/hyperf-hashing",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "hyperf",
+        "hashing"
+    ],
+    "description": "The Hyperf Hashing package.",
+    "authors": [
+        {
+            "name": "zhuchunshu",
+            "email": "laravel@88.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "HyperfExt\\Hashing\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HyperfTest\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.3",
+        "ext-swoole": ">=4.5",
+        "hyperf/config": "2.2.*",
+        "hyperf/di": "2.2.*",
+        "hyperf/framework": "2.2.*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "hyperf/testing": "2.2.*",
+        "phpstan/phpstan": "^0.12",
+        "swoole/ide-helper": "dev-master"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "co-phpunit -c phpunit.xml --colors=always",
+        "analyse": "phpstan analyse --memory-limit 1024M -l 0 ./src",
+        "cs-fix": "php-cs-fixer fix $1"
+    },
+    "extra": {
+        "hyperf": {
+            "config": "HyperfExt\\Hashing\\ConfigProvider"
+        }
+    }
+}
