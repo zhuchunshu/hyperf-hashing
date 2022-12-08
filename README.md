@@ -7,13 +7,13 @@
 ## 安装
 
 ```shell script
-composer require hyperf-ext/hashing
+composer require zhuchunshu/hyperf-hashing
 ```
 
 ## 发布配置
 
 ```shell script
-php bin/hyperf.php vendor:publish hyperf-ext/hashing
+php bin/hyperf.php vendor:publish zhuchunshu/hyperf-hashing
 ```
 
 > 配置文件位于 `config/autoload/hashing.php`。

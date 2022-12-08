@@ -20,7 +20,7 @@ return [
     |
     */
 
-    'default' => 'bcrypt',
+    'default' => env("HASH_DIRVE"),
 
     'driver' => [
         /*
@@ -39,6 +39,16 @@ return [
             'options' => [
                 'rounds' => env('BCRYPT_ROUNDS', 10),
             ],
+        ],
+
+        'md5' => [
+            'class' => \HyperfExt\Hashing\Driver\Md5Driver::class,
+            'options' => [],
+        ],
+
+        'md5t' => [
+            'class' => \HyperfExt\Hashing\Driver\Md5TDriver::class,
+            'options' => []
         ],
 
         /*
