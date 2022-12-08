@@ -20,7 +20,7 @@ return [
     |
     */
 
-    'default' => env("HASH_DIRVE"),
+    'default' => env("HASH_DIRVE","bcrypt"),
 
     'driver' => [
         /*
